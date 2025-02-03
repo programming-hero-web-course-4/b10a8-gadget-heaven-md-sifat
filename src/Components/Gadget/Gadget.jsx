@@ -22,8 +22,8 @@ const Gadget = ({ gadget }) => {
                 <p className="text-lg font-bold text-blue-600 mt-2">${price}</p>
             </div>
 
-            <div className="btn border-2 border-gray-500 ">
-                <Link to={`/gadgets/${product_id}`}> View Details </Link>
+            <div >
+                <Link className="btn curson-pointer border-2 p-2 rounded-3xl w-[150px] border-gray-500 " to={`/gadgets/${product_id}`}> View Details </Link>
             </div>
         </div>
     );

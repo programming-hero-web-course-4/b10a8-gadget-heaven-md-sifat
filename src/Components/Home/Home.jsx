@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import Nab from "../Nab/Nab";
 import Footer from "../Footer/Footer";
 import { createContext, useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const homeContext = createContext();
 
@@ -20,6 +22,7 @@ const Home = () => {
     console.log(data);
     return (
         <homeContext.Provider value={{ data, cart, wishlist , setCart , setWishlist }} >
+            <ToastContainer position="top-right" autoClose={3000} />
             <div className="w-full flex flex-col bg-gray-100  h-auto min-h-screen">
                 <div className="nab w-full h-[20%]">
                     <Nab></Nab>

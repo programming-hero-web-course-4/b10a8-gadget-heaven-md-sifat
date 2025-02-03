@@ -4,7 +4,7 @@ import { homeContext } from "../Home/Home"
 import Gadget from '../Gadget/Gadget';
 
 const Gadgets = () => {
-    const { data, cart, wishlist, setCart, setWishlist } = useContext(homeContext);
+    const { data } = useContext(homeContext);
     // console.log(data);
     const [selectedCata, setCata] = useState('All Products');
 
