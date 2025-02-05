@@ -14,21 +14,21 @@ const GadgetD = () => {
     const { data , cart, wishlist , setCart , setWishlist } = useContext(homeContext);
     // console.log(productId + "ck");
 
-    const adtoCart = (id) =>{
-        if(cart.includes(id)){
+    const adtoCart = (product) =>{
+        if(cart.includes(product)){
             toast.warn("Item is already in the cart!");
             return;
         }
-        setCart([...cart , id]);
+        setCart([...cart , product]);
         toast.success("Item added to cart! 🎉");
     }
     
-    const adtoWish = (id) =>{
-        if(wishlist.includes(id)){
+    const adtoWish = (product) =>{
+        if(wishlist.includes(product)){
             toast.warn("Item is already in the Wishlist!");
             return;
         }
-        setWishlist([...wishlist , id]);
+        setWishlist([...wishlist , product]);
         toast.success("Item added to Wishlist! 🎉");
 
     }
@@ -50,7 +50,6 @@ const GadgetD = () => {
     }
 
     const {
-        product_id,
         product_title,
         product_image,
         category,
@@ -125,12 +124,12 @@ const GadgetD = () => {
                         </ul>
                     </div>
                     <div className="btn flex flex-row">
-                        <div onClick={()=> adtoCart(product_id)} className="select border-2 border-transparent mt-1 cursor-pointer text-center items-center w-40 text-white bg-[#9538E2] flex px-2 rounded-2xl">
+                        <div onClick={()=> adtoCart(product)} className="select border-2 border-transparent mt-1 cursor-pointer text-center items-center w-40 text-white bg-[#9538E2] flex px-2 rounded-2xl">
                             Add to cart
                             <BsCart3 className="mx-2" size={20} />
 
                         </div>
-                        <div onClick={()=>adtoWish(product_id)} className="select text-center flex flex-cols my-2  justify-center border-2 border-gray-300 cursor-pointer p-2 rounded-full mx-3">
+                        <div onClick={()=>adtoWish(product)} className="select text-center flex flex-cols my-2  justify-center border-2 border-gray-300 cursor-pointer p-2 rounded-full mx-3">
                             <CiHeart size={28} />
 
                         </div>

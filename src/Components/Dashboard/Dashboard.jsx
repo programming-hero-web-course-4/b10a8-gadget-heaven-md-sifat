@@ -5,7 +5,7 @@ import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 
 
 const Dashboard = () => {
-    const { data, cart, wishlist, setCart, setWishlist } = useContext(homeContext);
+    const {  cart } = useContext(homeContext);
 
     console.log(cart);
 
@@ -19,7 +19,7 @@ const Dashboard = () => {
 
     return (
         <div className="cont flex justify-center h-auto  flex-col">
-            <div className="header w-[100%] h-[70vh] border-transparent border-2  bg-[#9538E2] ">
+            <div className="header w-[100%] h-[50vh] border-transparent border-2  bg-[#9538E2] ">
                 <div className="title px-[15%] pt-10 text-5xl text-center font-bold text-white">
                     Dashboard
                 </div>
